@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="cache-control" content="public" />
-	<meta http-equiv="expires" content="2017-10-21 00:00:01" />
     <meta name="description" content="Otimização da página de exemplo final do curso de Otimização Web">
     <meta name="author" content="BrunoBiluca">
     <title>Cameron Pittman: Portfolio</title>
 	
+	<!-- TODO Determinar o tempo de vida (cache) dos recursos que são utilizados pela página-->
+	<!-- Isso deve ser feito para cada recurso no servidor -->
+	
 	<!-- Reduzir recurso crítico utilizando media queries -->
     <link href="css/print.css" rel="stylesheet" media="print">
 
+	<!-- Carregar javascript assíncronamente já que ele não é utilizado para manipular o DOM -->
     <script async src="js/perfmatters.min.js"></script>
 
+	<!-- CSS do DOM que fica antes da borda -->
 	<style>
 		html {
 		font-size: 100%;
@@ -99,6 +103,8 @@
 
 <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<!-- Fica o resto do css que é carregado depois da borda -->
 <link href="css/style.min.css" rel="stylesheet">
 
 <!-- Alterar javascript para ser executado depois que o dom for criado -->
